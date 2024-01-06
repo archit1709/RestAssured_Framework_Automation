@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Architg/IdeaProjects/RestAssured_Framework/src/test/java/api/tests">
+        <classes>
+            <class name="api.tests.DataDrivenTest">
+                <methods><include name="createUser"/></methods>
+            </class>
+            <class name="api.tests.UserTest">
+                <methods>
+                    <include name="createUser"/>
+                    <include name="updateUserByName"/>
+                    <include name="deleteuserByName"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name ="listeners.ExtentReportListener" />
+        <listener class-name="listeners.ExtentManager"></listener>
+        <listener class-name="listeners.ExtentTestManager"></listener>
+    </listeners>
+</suite>
